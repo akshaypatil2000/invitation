@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home & Rice Mill Opening</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <style media="screen">
+    body{
+      background: rgb(212, 250, 255);
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="container header text-white text-center" >
+      <div class="text">
+        <h1 style="font-size:50px;">Grand Opening </h1>
+        <h1>Home & Rice Mill</h1>
+      </div>
+    </div>
+
+    <div class="container shadow mt-3" id="timediv" style="background:rgb(25, 13, 55);">
+      <div class="timer">
+        <p id="time"></p>
+      </div>
+    </div>
+
+
+    <div class="container mt-3 p-3 mb-5" style="background:#123;">
+      <div class="invitation">
+        <center>
+        <small>|| Om Namah Shivay || || Shri Ganeshay Namah ||</small>
+        <br><br><br>
+
+        <h6>Solicit your gracious presence with your family and friends on the auspicious occation
+        of </h6>
+        <h4>Gruha Pravesh & Rice Mill Opening</h4><br>
+
+        <p>On Wednesday 28<sup>th</sup> October 2020 at 10.00 am
+        Main Road Handiganur,Tal:Dist:-Belgaum.</p>
+
+        <p> <i>Followed by Lunch :12:00 pm onwards</i> </p>
+
+         <strong>With Best Compliments From</strong><br><br>
+       </center>
+
+       <div class="row">
+         <div class="col-lg-3">
+         </div>
+         <div class="col-lg-3">
+           <li>Mr. Appaji B. Patil</li>
+           <li>Mrs. Anita A. Patil</li>
+           <li>Kumar. Akshay A. Patil</li>
+           <li>Kumari. Gouri A. Patil</li>
+         </div>
+         <div class="col-lg-3">
+           <li>Mr. Anand B. Patil</li>
+           <li>Mrs. Sunita A. Patil</li>
+           <li>Kumari. Ashwini A. Patil</li>
+           <li>Kumar. Aniket A. Patil</li>
+         </div>
+         <div class="col-lg-3">
+         </div>
+       </div>
+
+       <div class="text-center mt-2">
+        <strong>  Patil and Family, Relatives and Friends </strong>
+       </div>
+      </div>
+    </div>
+
+    <div class="container mb-5" id="main">
+      <div class="main">
+        <h1>You are invited</h1>
+        <h3>of Course</h3>
+      </div>
+    </div>
+
+
+    <div class="container  shadow p-3 mb-3">
+      <h5 class="text-center mb-3">Location</h5>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.9301485981614!2d74.44972851427374!3d15.96502378894534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc09dc9352072d5%3A0x856d8e9a36941ab8!2sKalmeshwar%20Rice%20Mill!5e0!3m2!1sen!2sin!4v1603460682104!5m2!1sen!2sin"
+        allowfullscreen  width="100%"
+      height="400px"></iframe>
+    </div>
+
+    <div class="container p-3" style="background:black;">
+      <div class="icons">
+        <a href="https:/www.facebook.com/akshaypatil2000" target="_blank"> <i class="fa fa-facebook"></i> </a>
+        <a href="https:/www.instagram.com/mr.akshay_patil07" target="_blank"> <i class="fa fa-instagram"></i> </a>
+        <a href="https:/www.twitter.com/akshay_patil07" target="_blank"> <i class="fa fa-twitter"></i> </a>
+        <a href="https:/www.github.com/akshaypatil2000" target="_blank"> <i class="fa fa-github"></i> </a>
+      </div>
+      <div class="text-center text-white">
+        <p> <small>Designed by <a href="aboutus.html" target="_blank">Akshay Patil</a> student of GSS BCA</small> </p>
+      </div>
+    </div>
+
+
+    <script>
+    var countDownDate = new Date("October 28, 2020 12:00:00").getTime();
+    var x = setInterval(function(){
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("time").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s " + "left";
+
+    if ( days == 0 && hours <=12 ) {
+      clearInterval(x);
+      document.getElementById("time").innerHTML = "Function is Today";
+    }
+   if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("time").innerHTML = "Function done Successfully";
+      }
+    },1000);
+
+    </script>
+  </body>
+</html>
